@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>APEX AUTOLAB — Приймання авто</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <script src="{{ url_for('static', filename='js/theme.js') }}" defer></script>
+  <script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+<div id="apex-ui">
+  <header class="top"><div><div class="brand">APEX AUTOLAB<small>Engineering at the limit.</small></div><div class="brand-subtitle">RECEPTION · ПРИЙМАННЯ АВТО</div></div><div class="contact">Святопетрівське · вул. В’ячеслава Чорновола, 35<br>+38 (063) 801-01-11<br>service@apexautolab.pro</div></header>
+  <div class="shell">
+    <nav id="navigation" aria-label="Основна навігація" hidden>
+      <a href="#orders" data-nav="orders">Замовлення</a><a href="#intake" data-nav="intake">Приймання авто</a><a href="#clients" data-nav="clients">Клієнти</a><a href="#vehicles" data-nav="vehicles">Автомобілі</a><a href="#backups" data-nav="backups">Резервні копії</a>
+      <span id="operator-name" class="muted tiny"></span><button type="button" id="logout">Вийти</button>
+    </nav>
+    <div class="app-tools"><span id="connection" class="muted tiny">Підключення до сервера…</span><label class="theme-control">Тема<select id="apex-theme" aria-label="Тема оформлення"><option value="dark">Темна</option><option value="light">Світла</option><option value="system">Системна</option></select></label></div>
+    <div id="busy" role="status" aria-live="polite" hidden>Завантаження…</div>
+    <div id="message" role="status" aria-live="polite" hidden></div>
+    <div id="error" role="alert" hidden></div>
+    <main id="main" aria-busy="true"><p class="empty">Підключення до сервера…</p></main>
+  </div>
+  <footer class="footer"><span>APEX AUTOLAB · Приймання авто</span><span>Локальний застосунок · v1.1</span></footer>
+</div>
+<dialog id="editor" aria-labelledby="editor-title"></dialog>
+<noscript>Для роботи застосунку ввімкніть JavaScript у браузері.</noscript>
+</body>
+</html>

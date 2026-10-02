@@ -8,7 +8,7 @@ from .db import get_db, transaction, now
 from .validation import Problem, body, text
 
 bp = Blueprint('auth', __name__, url_prefix='/api/auth')
-PUBLIC = {'auth.csrf', 'auth.login', 'api.health', 'api.index'}
+PUBLIC = {'auth.csrf', 'auth.login', 'api.health', 'api.index', 'static'}
 
 def guard():
     if request.endpoint is None or request.endpoint in PUBLIC:

@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, render_template
 from .db import get_db, one, transaction, now
 from .validation import Problem, body, text, identifier, phone, plate, vin, pagination, query, day
 from . import orders
@@ -7,7 +7,7 @@ bp = Blueprint('api', __name__)
 
 @bp.get('/')
 def index():
-    return jsonify(application='APEX AutoLab Reception backend', version='1.0.0', health='/api/health', documentation='docs/API.md')
+    return render_template('index.html')
 
 @bp.get('/api/health')
 def health():

@@ -56,7 +56,11 @@ def create_app(config=None):
     def headers(response):
         response.headers['Cache-Control']='no-store'
         response.headers['X-Content-Type-Options']='nosniff'
-        response.headers['Content-Security-Policy']="default-src 'none'; frame-ancestors 'none'"
+        response.headers['Content-Security-Policy']=(
+            "default-src 'none'; script-src 'self'; style-src 'self'; "
+            "img-src 'self' blob:; connect-src 'self'; font-src 'self'; "
+            "base-uri 'none'; form-action 'self'; frame-ancestors 'none'; object-src 'none'")
+        response.headers['Referrer-Policy']='no-referrer'
         return response
 
     def error(code,message,status,details=None):

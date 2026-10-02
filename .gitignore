@@ -4,3 +4,7 @@ __pycache__/
 .pytest_cache/
 *.pyc
 *.sqlite3
+node_modules/
+frontend-test-results/
+.apex-update-backups/
+.DS_Store

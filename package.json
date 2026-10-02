@@ -1,0 +1,6 @@
+{
+  "name": "apex-autolab-frontend-tests",
+  "private": true,
+  "scripts": {"test:frontend": "node tools/test_frontend.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}
