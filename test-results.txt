@@ -1,0 +1,6 @@
+Command: python -m pytest -q --junitxml=test-results.xml
+Final run: 2026-10-02
+........................................... [100%]
+43 passed in 7.46s
+
+See test-results.xml for test names and individual durations.

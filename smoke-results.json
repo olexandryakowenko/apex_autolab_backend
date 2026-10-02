@@ -1,0 +1,18 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "health_http": 200,
+  "created_http": 201,
+  "duplicate_http": 200,
+  "states": [
+    "ready",
+    "in_progress",
+    "completed"
+  ],
+  "backup_http": 201,
+  "online_restore_blocked": true,
+  "synthetic_ocr_expected": "AA1234BB",
+  "synthetic_ocr_actual": "AA1234BB",
+  "synthetic_ocr_seconds": 0.13,
+  "real_vehicle_photo_dataset_tested": false
+}
